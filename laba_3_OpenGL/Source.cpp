@@ -10,7 +10,12 @@ GLfloat vertices[] = {
 	 0.5f, -0.5f, 0.0f,
 	 0.0f,  0.5f, 0.0f
 };
+GLfloat color[]{
 
+	1.0, 0.5, 0.5,
+	0.0, 0.5, 0.5,
+	0.5, 0.5, 0.5
+};
 
 
 
@@ -130,12 +135,18 @@ int main() {
 	GLuint VAO;
 	glGenVertexArrays(1, &VAO);
 	glBindVertexArray(VAO);
-	GLuint VBO;
-	glGenBuffers(1, &VBO);
-	glBindBuffer(GL_ARRAY_BUFFER, VBO);
+	GLuint VBO1,VBO2;
+	glGenBuffers(1, &VBO1);
+	glBindBuffer(GL_ARRAY_BUFFER, VBO1);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 	glEnableVertexAttribArray(0);
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, NULL);
+	glGenBuffers(1, &VBO2);
+	glBindBuffer(GL_ARRAY_BUFFER, VBO2);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(color), color, GL_STATIC_DRAW);
+	glEnableVertexAttribArray(1);
+	
+	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, NULL);
 
 
 
