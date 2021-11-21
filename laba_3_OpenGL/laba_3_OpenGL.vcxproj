@@ -78,8 +78,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\18vf1-1\source\repos\laba_3_OpenGL\GL\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\18vf1-1\source\glfw-3.3.4.bin.WIN64\lib-vc2019;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\neste\source\C++\GL\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\neste\source\C++\GL\lib-vc2019;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
